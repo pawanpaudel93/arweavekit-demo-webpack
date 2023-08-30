@@ -2,6 +2,7 @@ const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 
 module.exports = {
   webpack: {
+    // Using craco to import files from outside the src/ directory
     configure: (webpackConfig) => {
       const scopePluginIndex = webpackConfig.resolve.plugins.findIndex(
         ({ constructor }) =>
