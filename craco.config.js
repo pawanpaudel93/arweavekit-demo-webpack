@@ -13,7 +13,11 @@ module.exports = {
       return webpackConfig;
     },
     plugins: {
-      add: [new NodePolyfillPlugin()],
+      add: [
+        new NodePolyfillPlugin({
+          includeAliases: ["buffer", "Buffer", "crypto", "stream"],
+        }),
+      ],
     },
   },
 };
